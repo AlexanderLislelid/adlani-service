@@ -1,19 +1,41 @@
 /* Nav */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 24px;
+.mobile-nav {
+  display: none;
 }
 
-.links {
+.desktop-nav {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
   gap: 24px;
 }
 
-.navbar img {
-  max-width: 80px;
+.site-header {
+  position: relative;
+
+  padding: 2rem;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  background-color: var(--bg-main);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  height: auto;
 }
 
 /* Hero */
@@ -26,6 +48,7 @@
   background-position: center;
   display: flex;
   align-items: center;
+  margin-top: -0.5rem;
 }
 
 .hero::before {
@@ -44,4 +67,15 @@
 
 .hero h1 {
   font-size: clamp(3rem, 10vw, 5rem);
+  color: white;
+}
+
+.hero p {
+  color: white;
+}
+
+.hero a {
+  padding: 8px 16px;
+  background-color: var(--brand-gold);
+  border-radius: 8px;
 }
