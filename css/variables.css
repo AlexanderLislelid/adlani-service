@@ -1,0 +1,43 @@
+:root {
+  /* ===== Brand colors (logo-based) ===== */
+  --brand-green-dark: #0f3f2e;
+  --brand-green: #1f5c45;
+  --brand-green-light: #5f8f7c;
+
+  --brand-gold: #f2c94c;
+  --brand-gold-hover: #e0b63f;
+
+  --brand-offwhite: #f7f4ee;
+
+  /* ===== Backgrounds ===== */
+  --bg-main: var(--brand-offwhite);
+  --bg-section: #ffffff;
+  --bg-card: #ffffff;
+  --bg-accent: var(--brand-green-light);
+
+  /* ===== Text ===== */
+  --text-primary: var(--brand-green-dark);
+  --text-secondary: #3d5f52;
+  --text-muted: #6f8f83;
+  --text-inverse: #ffffff;
+
+  /* ===== Buttons & CTA ===== */
+  --cta-primary: var(--brand-gold);
+  --cta-primary-hover: var(--brand-gold-hover);
+  --cta-text: var(--brand-green-dark);
+
+  --cta-secondary: var(--brand-green);
+  --cta-secondary-hover: var(--brand-green-dark);
+
+  /* ===== Borders & lines ===== */
+  --border-default: #d8e2dc;
+  --border-strong: var(--brand-green);
+
+  /* ===== UI tokens ===== */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-16: 16px;
+
+  --shadow-soft: 0 4px 12px rgba(15, 63, 46, 0.08);
+  --shadow-medium: 0 8px 24px rgba(15, 63, 46, 0.12);
+}
