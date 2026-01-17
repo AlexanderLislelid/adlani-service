@@ -1,0 +1,47 @@
+/* Nav */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar img {
+  max-width: 80px;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  min-height: 30vh;
+  background-image: url("/img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* JUSTER denne */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  /* left: 0px; */
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+}
