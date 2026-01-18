@@ -9,7 +9,6 @@ accordion?.addEventListener("click", (e) => {
 
   const isOpen = btn.getAttribute("aria-expanded") === "true";
 
-  // Lukk alle først (så blir berre ein open om gongen)
   accordion
     .querySelectorAll(".accordion-btn")
     .forEach((b) => b.setAttribute("aria-expanded", "false"));
@@ -18,13 +17,12 @@ accordion?.addEventListener("click", (e) => {
     .forEach((p) => (p.hidden = true));
   accordion
     .querySelectorAll(".accordion-icon")
-    .forEach((i) => (i.textContent = "+"));
+    .forEach((i) => (i.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'));
 
-  // Hvis den var open: den skal berre lukkast (ferdig)
   if (isOpen) return;
 
-  // Åpne den du klikka
   btn.setAttribute("aria-expanded", "true");
   panel.hidden = false;
-  item.querySelector(".accordion-icon").textContent = "–";
+  item.querySelector(".accordion-icon").innerHTML =
+    '<i class="fa-solid fa-chevron-up"></i>';
 });

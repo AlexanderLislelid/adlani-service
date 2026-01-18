@@ -43,7 +43,7 @@
 .hero {
   position: relative;
   min-height: 30vh;
-  background-image: url("/img/hero.jpg");
+  background-image: url("/img/hero-min.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -80,11 +80,20 @@
   border-radius: 8px;
 }
 
-/* Accordition */
+/* About */
+
+/* jobs */
+
+#jobs,
+#about {
+  margin: 48px 24px;
+}
 
 .accordion {
   display: grid;
   gap: 12px;
+  margin-top: 24px;
+  max-width: clamp(280px, 90vw, 500px);
 }
 
 .accordion-item {
@@ -127,11 +136,6 @@
 .accordion-panel {
   padding: 0 18px 16px;
   color: var(--text-secondary);
-}
-
-/* Liten animasjon */
-.accordion-panel[hidden] {
-  display: none;
 }
 
 .accordion-panel ul {

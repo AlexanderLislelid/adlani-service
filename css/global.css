@@ -21,7 +21,6 @@ body {
   max-width: 1200px;
   background-color: var(--bg-main);
   color: var(--text-primary);
-
   font-family:
     system-ui,
     -apple-system,
@@ -47,12 +46,14 @@ video {
 }
 
 /* Links */
+
 a {
   color: var(--brand-green);
   text-decoration: none;
 }
 
 /* Headings */
+
 h1,
 h2,
 h3,
@@ -63,8 +64,8 @@ h4 {
 }
 
 p {
-  margin: 0 0 1rem;
   color: var(--text-secondary);
+  margin: 0 0 0.2rem;
 }
 
 button {
@@ -83,13 +84,10 @@ textarea,
 select {
   width: 100%;
   padding: 0.75rem 0.9rem;
-
   background: var(--bg-section);
   color: var(--text-primary);
-
   border: 1px solid var(--border-default);
   border-radius: var(--radius-8);
-
   font: inherit;
 }
 
