@@ -1,43 +1,43 @@
 :root {
-  /* ===== Brand colors (logo-based) ===== */
-  --brand-green-dark: #0f3f2e;
-  --brand-green: #1f5c45;
-  --brand-green-light: #5f8f7c;
+  /* ===== Brand colors (refined) ===== */
+  --brand-green-dark: #0e3327; /* dypere, mer eksklusiv */
+  --brand-green: #1e5643; /* litt mindre metning */
+  --brand-green-light: #7fae9a; /* mykere, mer moderne */
 
-  --brand-gold: #f2c94c;
-  --brand-gold-hover: #e0b63f;
+  --brand-gold: #e6b94f; /* mindre skrikete enn før */
+  --brand-gold-hover: #d4a842;
 
-  --brand-offwhite: #f7f4ee;
+  --brand-offwhite: #f5f3ee; /* varmere enn ren hvit */
 
   /* ===== Backgrounds ===== */
   --bg-main: var(--brand-offwhite);
   --bg-section: #ffffff;
   --bg-card: #ffffff;
-  --bg-accent: var(--brand-green-light);
+  --bg-accent: #eef4f1; /* subtil grønn bakgrunn */
 
   /* ===== Text ===== */
-  --text-primary: var(--brand-green-dark);
-  --text-secondary: #3d5f52;
-  --text-muted: #6f8f83;
+  --text-primary: #2a2a26; /* varm mørk grå */
+  --text-secondary: #4f5f57;
+  --text-muted: #8a9a93;
   --text-inverse: #ffffff;
 
   /* ===== Buttons & CTA ===== */
   --cta-primary: var(--brand-gold);
   --cta-primary-hover: var(--brand-gold-hover);
-  --cta-text: var(--brand-green-dark);
+  --cta-text: #1b2e27; /* litt mørkere for kontrast */
 
   --cta-secondary: var(--brand-green);
   --cta-secondary-hover: var(--brand-green-dark);
 
   /* ===== Borders & lines ===== */
-  --border-default: #d8e2dc;
-  --border-strong: var(--brand-green);
+  --border-default: #d2e0da;
+  --border-strong: #1e5643;
 
   /* ===== UI tokens ===== */
   --radius-4: 4px;
   --radius-8: 8px;
   --radius-16: 16px;
 
-  --shadow-soft: 0 4px 12px rgba(15, 63, 46, 0.08);
-  --shadow-medium: 0 8px 24px rgba(15, 63, 46, 0.12);
+  --shadow-soft: 0 4px 12px rgba(14, 51, 39, 0.08);
+  --shadow-medium: 0 10px 28px rgba(14, 51, 39, 0.14);
 }

@@ -79,3 +79,63 @@
   background-color: var(--brand-gold);
   border-radius: 8px;
 }
+
+/* Accordition */
+
+.accordion {
+  display: grid;
+  gap: 12px;
+}
+
+.accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-16);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.accordion-btn {
+  width: 100%;
+  padding: 16px 18px;
+  background: transparent;
+  border: 0;
+  color: var(--text-primary);
+  font: inherit;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-btn:focus-visible {
+  outline: 2px solid var(--cta-primary);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+.accordion-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--border-default);
+}
+
+.accordion-panel {
+  padding: 0 18px 16px;
+  color: var(--text-secondary);
+}
+
+/* Liten animasjon */
+.accordion-panel[hidden] {
+  display: none;
+}
+
+.accordion-panel ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}

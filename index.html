@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adlani-service</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -32,7 +33,56 @@
         </div>
       </section>
       <section id="about"></section>
-      <section id="jobs"></section>
+      <section id="jobs">
+        <h2>Tjenester</h2>
+
+        <div class="accordion" data-accordion>
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              Transport
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-panel" hidden>
+              <ul>
+                <li>Henting og levering</li>
+                <li>Bortkjøring til gjenvinning</li>
+                <li>Småflytting</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              Montering
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-panel" hidden>
+              <ul>
+                <li>Møbelmontering</li>
+                <li>Hyler og oppheng</li>
+                <li>TV på vegg</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              Vedlikehold
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-panel" hidden>
+              <ul>
+                <li>Småreparasjonar</li>
+                <li>Listing og silikon</li>
+                <li>Enkle oppgraderingar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="contact"></section>
     </main>
     <footer></footer>
