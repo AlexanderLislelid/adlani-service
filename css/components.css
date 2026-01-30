@@ -12,8 +12,7 @@
 
 .site-header {
   position: relative;
-
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .logo-wrapper {
@@ -72,14 +71,17 @@
 
 .hero p {
   color: white;
+  font-weight: 500;
 }
 
-.hero a {
+.contact-btn {
   padding: 8px 16px;
   background-color: var(--brand-gold);
   border-radius: 8px;
+  color: black;
+  display: inline-block;
+  margin-top: 8px;
 }
-
 /* About */
 
 /* jobs */
@@ -186,4 +188,68 @@
 .contact-value {
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+/* Base */
+
+.mobile-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.desktop-nav {
+  display: none;
+}
+/* Menu panel */
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 15;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.mobile-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Open state */
+.mobile-nav.is-open .mobile-menu {
+  display: flex;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+
+  .site-header {
+    padding: 2rem;
+  }
 }

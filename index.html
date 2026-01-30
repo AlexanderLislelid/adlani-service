@@ -17,12 +17,19 @@
         <img src="img/logo.png" alt="Adlani logo" />
       </div>
 
-      <nav class="desktop-nav">
-        <a href="#about">Om</a>
-        <a href="#jobs">Tjenester</a>
-        <a href="#contact">Kontakt</a>
+      <!-- Mobil: toggle + meny -->
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <i class="fa-solid fa-bars fa-lg"></i>
+
+        <div class="mobile-menu" id="mobile-menu" data-nav-menu>
+          <a href="#about">Om</a>
+          <a href="#jobs">Tjenester</a>
+          <a href="#contact">Kontakt</a>
+        </div>
       </nav>
-      <nav class="mobile-nav">
+
+      <!-- Desktop -->
+      <nav class="desktop-nav" aria-label="Desktop navigation">
         <a href="#about">Om</a>
         <a href="#jobs">Tjenester</a>
         <a href="#contact">Kontakt</a>
@@ -33,7 +40,7 @@
         <div class="hero-content">
           <h1>ADLANI</h1>
           <p>Service og Vedlikehald</p>
-          <a href="#contact">Kontakt meg</a>
+          <a href="#contact" class="contact-btn">Kontakt meg</a>
         </div>
       </section>
       <section id="about">

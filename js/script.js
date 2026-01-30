@@ -26,3 +26,36 @@ accordion?.addEventListener("click", (e) => {
   item.querySelector(".accordion-icon").innerHTML =
     '<i class="fa-solid fa-chevron-up"></i>';
 });
+
+//navbar toggle
+
+const mobileNav = document.querySelector(".mobile-nav");
+const toggleBtn = document.querySelector(".fa-solid.fa-bars.fa-lg");
+const menu = document.querySelector("[data-nav-menu]");
+
+if (mobileNav && toggleBtn && menu) {
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = mobileNav.classList.toggle("is-open");
+    toggleBtn.setAttribute("aria-expanded", String(isOpen));
+    toggleBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  // Lukk meny
+  menu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      mobileNav.classList.remove("is-open");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      toggleBtn.setAttribute("aria-label", "Open menu");
+    });
+  });
+
+  // Lukk ved klikk utanfor
+  document.addEventListener("click", (e) => {
+    const clickedInside = mobileNav.contains(e.target);
+    if (!clickedInside) {
+      mobileNav.classList.remove("is-open");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      toggleBtn.setAttribute("aria-label", "Open menu");
+    }
+  });
+}
