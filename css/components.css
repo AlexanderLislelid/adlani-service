@@ -1,31 +1,39 @@
-/* Nav */
-.mobile-nav {
-  display: none;
-}
-
-.desktop-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 24px;
-}
+/* =========================
+   NAV (mobile-first)
+   ========================= */
 
 .site-header {
   position: relative;
-  padding: 2.5rem;
+  padding: 1.8rem;
 }
 
+.nav-toggle {
+  background-color: var(--bg-main);
+  box-shadow: var(--shadow-soft);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+/* Logo */
 .logo-wrapper {
   position: absolute;
   top: 1rem;
   left: 1.5rem;
-
   width: 100px;
   height: 100px;
-
   border-radius: 50%;
   background-color: var(--bg-main);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,16 +45,61 @@
   height: auto;
 }
 
-/* Hero */
+/* Mobilmenu panel */
+
+.mobile-menu {
+  position: absolute;
+  top: 92%;
+  right: 0.1rem;
+  width: 100%;
+  min-width: 220px;
+  padding: 12px;
+
+  border-radius: 0 0 8px 8px;
+  background: rgba(34, 69, 56, 0.85);
+  backdrop-filter: blur(8px);
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 15;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.mobile-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Open state */
+.mobile-nav.is-open .mobile-menu {
+  display: flex;
+}
+
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
   position: relative;
   min-height: 30vh;
-  background-image: url("/img/hero-min.png");
+
+  background-image: url("/img/hero.png");
   background-size: cover;
   background-position: center;
+
   display: flex;
   align-items: center;
+
   margin-top: -0.5rem;
 }
 
@@ -54,14 +107,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* JUSTER denne */
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   padding: 2rem;
-  /* left: 0px; */
 }
 
 .hero h1 {
@@ -75,21 +127,29 @@
 }
 
 .contact-btn {
-  padding: 8px 16px;
+  padding: 8px 24px;
   background-color: var(--brand-gold);
   border-radius: 8px;
   color: black;
   display: inline-block;
   margin-top: 8px;
 }
-/* About */
 
-/* jobs */
+/* =========================
+   SECTIONS: ABOUT / JOBS
+   ========================= */
+#about p {
+  margin-top: 8px;
+}
 
 #jobs,
 #about {
   margin: 48px 24px;
 }
+
+/* =========================
+   ACCORDION
+   ========================= */
 
 .accordion {
   display: grid;
@@ -109,14 +169,18 @@
 .accordion-btn {
   width: 100%;
   padding: 16px 18px;
+
   background: transparent;
   border: 0;
   color: var(--text-primary);
+
   font: inherit;
   font-weight: 600;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   cursor: pointer;
 }
 
@@ -129,8 +193,10 @@
 .accordion-icon {
   width: 34px;
   height: 34px;
+
   display: grid;
   place-items: center;
+
   border-radius: 999px;
   border: 1px solid var(--border-default);
 }
@@ -146,15 +212,22 @@
   line-height: 1.6;
 }
 
-/* contact */
+/* =========================
+   CONTACT
+   ========================= */
 
 .contact {
   background: var(--bg-accent);
   padding: 4rem 1.5rem;
+  background-color: #224538;
+}
+
+.contact h2,
+.contact p {
+  color: white;
 }
 
 .contact-wrapper {
-  max-width: 720px;
   margin-inline: auto;
   text-align: center;
 }
@@ -167,17 +240,21 @@
 
 .contact-card {
   background: var(--bg-card);
-  padding: 1.25rem;
+  padding: 1rem;
   border-radius: var(--radius-16);
   box-shadow: var(--shadow-soft);
+
   text-decoration: none;
   color: var(--text-primary);
+
   display: grid;
   gap: 0.25rem;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 .contact-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .contact-label {
@@ -190,54 +267,15 @@
   font-weight: 600;
 }
 
-/* Base */
+/* =========================
+   DESKTOP BREAKPOINT
+   ========================= */
 
-.mobile-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.desktop-nav {
-  display: none;
-}
-/* Menu panel */
-
-.mobile-menu {
-  position: absolute;
-  top: 100%;
-  right: 1rem;
-  margin-top: 1rem;
-  width: 100%;
-  min-width: 220px;
-  padding: 12px;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 15;
-}
-
-.mobile-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 10px;
-}
-
-.mobile-menu a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Open state */
-.mobile-nav.is-open .mobile-menu {
-  display: flex;
-}
-
-/* Desktop breakpoint */
 @media (min-width: 768px) {
+  .site-header {
+    padding: 2rem;
+  }
+
   .mobile-nav {
     display: none;
   }
@@ -247,9 +285,5 @@
     align-items: center;
     justify-content: flex-end;
     gap: 24px;
-  }
-
-  .site-header {
-    padding: 2rem;
   }
 }

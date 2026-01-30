@@ -19,7 +19,14 @@
 
       <!-- Mobil: toggle + meny -->
       <nav class="mobile-nav" aria-label="Mobile navigation">
-        <i class="fa-solid fa-bars fa-lg"></i>
+        <button
+          class="nav-toggle"
+          data-nav-toggle
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars fa-lg"></i>
+        </button>
 
         <div class="mobile-menu" id="mobile-menu" data-nav-menu>
           <a href="#about">Om</a>
@@ -46,7 +53,10 @@
       <section id="about">
         <h2>Om meg</h2>
         <p>Påliteleg hjelp til hus og hage i Årdal og omegn.</p>
-        <p>Eg tilbyr eit stort utvalg av tenestar</p>
+        <p>
+          Eg tilbyr takvask og mosefjerning, fasadevask, hagearbeid, snømåking,
+          små reperasjonar, transporttjenester og faste vedlikehaldsavtaler.
+        </p>
       </section>
       <section id="jobs">
         <h2>Tjenester</h2>
@@ -71,23 +81,6 @@
 
           <div class="accordion-item">
             <button class="accordion-btn" type="button" aria-expanded="false">
-              Montering
-              <span class="accordion-icon" aria-hidden="true"
-                ><i class="fa-solid fa-chevron-down"></i
-              ></span>
-            </button>
-
-            <div class="accordion-panel" hidden>
-              <ul>
-                <li>Møbelmontering</li>
-                <li>Hyler og oppheng</li>
-                <li>TV på vegg</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <button class="accordion-btn" type="button" aria-expanded="false">
               Vedlikehold
               <span class="accordion-icon" aria-hidden="true"
                 ><i class="fa-solid fa-chevron-down"></i
@@ -96,9 +89,29 @@
 
             <div class="accordion-panel" hidden>
               <ul>
-                <li>Småreparasjonar</li>
-                <li>Listing og silikon</li>
-                <li>Enkle oppgraderingar</li>
+                <li>Tak og fasadevask</li>
+                <li>Små reparasjonar - takrenner, port, gjerde etc</li>
+                <li>Grasklipping + hagearbeid</li>
+                <li>Hekk klipp + trebeskjæring</li>
+                <li>Små jobbar med betong</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              Diverse
+              <span class="accordion-icon" aria-hidden="true"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></span>
+            </button>
+
+            <div class="accordion-panel" hidden>
+              <ul>
+                <li>Rydding av garasje/kjeller + vekkøyring av bås</li>
+                <li>Små maleoppdrag</li>
+                <li>Snømåking / strøing</li>
+                <li>Bilvask heime hjå kunde</li>
               </ul>
             </div>
           </div>
@@ -113,14 +126,14 @@
           </p>
 
           <div class="contact-cards">
-            <a href="tel:90000000" class="contact-card">
+            <a href="tel:46654190" class="contact-card">
               <span class="contact-label">Telefon</span>
-              <span class="contact-value">900 00 000</span>
+              <span class="contact-value">466 54 190</span>
             </a>
 
-            <a href="mailto:post@firma.no" class="contact-card">
+            <a href="mailto:ahceneadlani12@gmail.com" class="contact-card">
               <span class="contact-label">E-post</span>
-              <span class="contact-value">post@firma.no</span>
+              <span class="contact-value">ahceneadlani12@gmail.com</span>
             </a>
 
             <div class="contact-card">

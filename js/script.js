@@ -27,35 +27,45 @@ accordion?.addEventListener("click", (e) => {
     '<i class="fa-solid fa-chevron-up"></i>';
 });
 
-//navbar toggle
-
+// Navbar toggle
 const mobileNav = document.querySelector(".mobile-nav");
-const toggleBtn = document.querySelector(".fa-solid.fa-bars.fa-lg");
+const toggleBtn = document.querySelector("[data-nav-toggle]");
 const menu = document.querySelector("[data-nav-menu]");
+const icon = toggleBtn?.querySelector("i");
 
-if (mobileNav && toggleBtn && menu) {
-  toggleBtn.addEventListener("click", () => {
+if (mobileNav && toggleBtn && menu && icon) {
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
     const isOpen = mobileNav.classList.toggle("is-open");
+
     toggleBtn.setAttribute("aria-expanded", String(isOpen));
     toggleBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+
+    // Byt ikon
+    icon.classList.toggle("fa-bars", !isOpen);
+    icon.classList.toggle("fa-xmark", isOpen);
   });
 
-  // Lukk meny
+  // Lukk meny ved klikk på lenke
   menu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      mobileNav.classList.remove("is-open");
-      toggleBtn.setAttribute("aria-expanded", "false");
-      toggleBtn.setAttribute("aria-label", "Open menu");
-    });
+    a.addEventListener("click", () => closeMenu());
   });
 
   // Lukk ved klikk utanfor
   document.addEventListener("click", (e) => {
-    const clickedInside = mobileNav.contains(e.target);
-    if (!clickedInside) {
-      mobileNav.classList.remove("is-open");
-      toggleBtn.setAttribute("aria-expanded", "false");
-      toggleBtn.setAttribute("aria-label", "Open menu");
+    if (!mobileNav.contains(e.target)) {
+      closeMenu();
     }
   });
+}
+
+function closeMenu() {
+  mobileNav.classList.remove("is-open");
+  toggleBtn.setAttribute("aria-expanded", "false");
+  toggleBtn.setAttribute("aria-label", "Open menu");
+
+  const icon = toggleBtn.querySelector("i");
+  icon.classList.remove("fa-xmark");
+  icon.classList.add("fa-bars");
 }
