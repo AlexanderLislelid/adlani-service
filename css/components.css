@@ -212,6 +212,19 @@
   line-height: 1.6;
 }
 
+.facebook-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1877f2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.facebook-link:hover {
+  text-decoration: underline;
+}
+
 /* =========================
    CONTACT
    ========================= */
